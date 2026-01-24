@@ -1,0 +1,62 @@
+/* styles.css — custom styles for Store Landing Page
+   Comments: Keep styles simple and responsive. Bootstrap handles layout; this file contains brand/visual tweaks. */
+
+:root{
+  --brand: #0d6efd; /* primary */
+  --muted: #6c757d;
+}
+
+/* Hero styling */
+.hero{
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 40%, #eef2ff 100%);
+}
+.hero .display-5{
+  color: #0f172a;
+}
+.hero-img{
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Product card hover effect */
+.product-card:hover{
+  transform: translateY(-6px);
+  transition: transform 0.18s ease-in-out, box-shadow 0.18s;
+  box-shadow: 0 10px 25px rgba(13, 110, 253, 0.08);
+}
+
+.card-img-top{
+  height: 170px;
+  object-fit: cover;
+}
+
+/* Footer */
+footer{
+  border-top: 1px solid rgba(0,0,0,0.05);
+  background: #fff;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px){
+  .hero .display-5{
+    font-size: 1.6rem;
+  }
+  .card-img-top{
+    height: 140px;
+  }
+}
+
+@media (min-width: 1200px){
+  .hero-img{ max-width: 90%; }
+}
+
+/* Small accessibility focus styles */
+.btn:focus{
+  box-shadow: 0 0 0 0.25rem rgba(13,110,253,0.18);
+}
+
+/* Utility: small muted text */
+.small-muted{
+  color: var(--muted);
+}
